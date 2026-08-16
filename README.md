@@ -68,6 +68,27 @@ An interactive, electrically accurate 3D web application simulating a **4-Bit Bi
    - 5-question lab assessment with instant grading and celebratory feedback.
 7. **Keyboard Shortcuts**:
    - `3`, `2`, `1`, `0`: Toggle respective input bits.
+   - `A`: Toggle Augmented Reality Mode.
    - `Space`: Start/Stop auto clock ticker.
    - `M`: Switch Conversion Mode (Binary $\leftrightarrow$ Gray).
    - `R`: Reset inputs to $0000_2$.
+
+---
+
+## 🌐 Deploy to GitHub Pages
+
+This project includes configuration for 1-click automatic deployment to GitHub Pages via **GitHub Actions**.
+
+### Option A: Automatic Deployment (Recommended)
+1. Push this repository to your GitHub account (e.g., `main` or `master` branch).
+2. On GitHub, go to your repository's **Settings** tab.
+3. In the left sidebar, click **Pages** (under *Code and automation*).
+4. Under **Build and deployment** $\to$ **Source**, select **GitHub Actions**.
+5. The workflow in `.github/workflows/deploy.yml` will automatically build the React app and deploy it live to `https://<your-username>.github.io/<repo-name>/`.
+
+### Option B: Manual CLI Deployment via `gh-pages`
+You can also deploy manually with one command:
+```bash
+npm run deploy
+```
+*(This automatically runs `npm run build` and publishes the compiled `./dist` folder to the `gh-pages` branch).*
